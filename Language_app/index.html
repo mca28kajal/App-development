@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Language Learning App</title>
+  <link rel="stylesheet" href="Style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Language Learning App</h1>
+
+    <div class="tabs">
+      <button onclick="showTab('flashcards')">📖 Flashcards</button>
+      <button onclick="showTab('quiz')">🧪 Quiz</button>
+    </div>
+
+    <div id="flashcards" class="tab">
+      <h2>Daily Flashcard</h2>
+      <div class="card">
+        <p id="word">Loading...</p>
+        <p id="translation"></p>
+        <button onclick="speakWord()">🔊 Pronounce</button>
+        <button onclick="nextFlashcard()">Next</button>
+      </div>
+    </div>
+
+    <div id="quiz" class="tab" style="display:none;">
+      <h2>Vocabulary Quiz</h2>
+      <p id="quiz-question"></p>
+      <div id="quiz-options"></div>
+      <p id="quiz-feedback"></p>
+      <button onclick="nextQuestion()">Next Question</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
